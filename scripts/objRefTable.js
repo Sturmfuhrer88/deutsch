@@ -12,13 +12,17 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Text,
 		C3.Behaviors.shadowcaster,
 		C3.Behaviors.Rotate,
+		C3.Plugins.InstantGamesBridge,
 		C3.Plugins.Touch.Cnds.OnTapGestureObject,
 		C3.Plugins.System.Acts.NextPrevLayout,
 		C3.Plugins.Audio.Acts.Play,
 		C3.Plugins.Sprite.Acts.SetVisible,
 		C3.Plugins.System.Acts.Wait,
 		C3.Plugins.System.Cnds.OnLayoutStart,
-		C3.Plugins.System.Acts.GoToLayout
+		C3.Plugins.System.Acts.GoToLayout,
+		C3.Plugins.InstantGamesBridge.Acts.SendMessage,
+		C3.Plugins.InstantGamesBridge.Acts.ShowInterstitial,
+		C3.Plugins.InstantGamesBridge.Acts.ShowBanner
 	];
 };
 self.C3_JsPropNameTable = [
@@ -249,7 +253,8 @@ self.C3_JsPropNameTable = [
 	{ENHOUSETHINGS: 0},
 	{ENKITCHEN: 0},
 	{homethingsenng: 0},
-	{OUTDIFRTHINGS: 0}
+	{OUTDIFRTHINGS: 0},
+	{InstantGamesBridge: 0}
 ];
 
 self.InstanceType = {
@@ -475,5 +480,6 @@ self.InstanceType = {
 	ENHOUSETHINGS: class extends self.ISpriteInstance {},
 	ENKITCHEN: class extends self.ISpriteInstance {},
 	homethingsenng: class extends self.ISpriteInstance {},
-	OUTDIFRTHINGS: class extends self.ISpriteInstance {}
+	OUTDIFRTHINGS: class extends self.ISpriteInstance {},
+	InstantGamesBridge: class extends self.IInstance {}
 }
